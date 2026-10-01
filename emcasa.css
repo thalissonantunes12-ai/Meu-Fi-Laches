@@ -1,0 +1,847 @@
+/* ==========================================
+   1. RESET UNIVERSAL & CONFIGURAÇÕES DO BODY
+   ========================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Imagem de fundo configurada para cobrir a tela inteira sem distorcer */
+    background-image: url("https://img.magnific.com/fotos-premium/uma-mesa-de-madeira-escura-vazia-em-frente-a-um-fundo-bokeh-borrado-abstrato-do-restaurante-pode-ser-usada-para_1319275-794.jpg?semt=ais_hybrid&w=740&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden; /* Remove barras de rolagem horizontais indesejadas */
+}
+.medula-one-regular {
+    font-family: "Medula One", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* ==========================================
+   2. MENU SUPERIOR (Alinhado à Direita)
+   ========================================== */
+.pai {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Alinha as opções no canto superior direito */
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.75); 
+    padding-right: 50px; 
+}
+.suspens {
+    color: bisque;
+    font-size: 22px;
+    margin-left: 35px; /* Cria o espaçamento automático ideal entre os links */
+    cursor: pointer;
+}
+.inicio u {
+    text-decoration: none;
+    border-bottom: 2px solid bisque;
+    padding-bottom: 2px;
+}
+/* ==========================================
+   3. CONTAINER PRINCIPAL (A Mágica do Alinhamento)
+   ========================================== */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px auto 0 auto; /* O 'auto' nas laterais centraliza a estrutura no meio da tela */
+    padding: 0 40px;
+    justify-content: space-between; /* Empurra os textos para a esquerda e o hambúrguer para a direita */
+    align-items: center;
+    flex-wrap: wrap; /* Se abrir no celular, o conteúdo se adapta automaticamente */
+}
+/* COLUNA DOS TEXTOS (ESQUERDA) */
+.pai2 {
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px; /* Impede que as caixas fiquem largas demais */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Distribui um espaço perfeito e vertical entre os blocos */
+}
+/* Estilização das caixas com o fundo escuro transparente idêntico à sua foto */
+.Titulo, .sub, .sub2 {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 25px; /* Cantos arredondados suaves como no Canva */
+    padding: 20px 25px;
+    width: 100%;
+}
+/* Ajustes finos nos textos de dentro das caixas */
+.pfont {
+    font-size: 64px;
+    color: white;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+    width: auto;
+}
+.sub h3 {
+    font-size: 32px;
+    font-weight: normal;
+    color: rgba(245, 245, 245, 0.95);
+    line-height: 1.3;
+}
+.sub2 h4 {
+    font-size: 18px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+}
+/* ==========================================
+   4. BOTÃO VER CARDÁPIO
+   ========================================== */
+.proximo {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px 35px;
+    border-radius: 8px;
+    align-self: flex-end; /* Alinha o botão à direita do bloco de textos */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.proximo:hover {
+    transform: scale(1.05); /* Efeito sutil ao passar o mouse */
+}
+.centrop {
+    color: black;
+}
+/* ==========================================
+   5. COLUNA DO HAMBÚRGUER (DIREITA)
+   ========================================== */
+.conteudo-direito {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+}
+.hamburguer-img {
+    max-width: 480px; /* Tamanho limite da imagem no computador */
+    width: 100%;
+    height: auto;
+}
+/* PROMOÇÕES */
+.pagpromocoes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.cabecalhoprom {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.cabecalhoprom h1 {
+    color: white;
+    font-size: 64px;
+    letter-spacing: 2px;
+}
+.bloco {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+.bloco-item {
+    width: 250px;
+    height: 385px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.bloco-item img {
+    width: 220px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+.bloco-item h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.bloco-item p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.3;
+}
+.destaque {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 7px 12px;
+    background-color: #e5a900;
+    color: black;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.btn-carrinho {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f5f5f5d6;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.btn-carrinho:hover {
+    transform: scale(1.05);
+    .btn-carrinho {
+    margin-top: auto;
+    align-self: center;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #c9a227;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+}
+/* ==========================================
+   1. RESET UNIVERSAL & CONFIGURAÇÕES DO BODY
+   ========================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("https://img.magnific.com/fotos-premium/uma-mesa-de-madeira-escura-vazia-em-frente-a-um-fundo-bokeh-borrado-abstrato-do-restaurante-pode-ser-usada-para_1319275-794.jpg?semt=ais_hybrid&w=740&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.medula-one-regular {
+    font-family: "Medula One", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* ==========================================
+   2. MENU SUPERIOR
+   ========================================== */
+.pai {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding-right: 50px;
+    border-bottom: 2px solid #ffc52f;
+    position: relative;
+    z-index: 10;
+}
+.suspens {
+    color: bisque;
+    font-size: 22px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+.suspens a {
+    color: bisque;
+    text-decoration: none;
+}
+.suspens a:hover {
+    color: #ffc52f;
+}
+.cardapio-link-pag3 a {
+    color: #ffc52f;
+    border-bottom: 2px solid #ffc52f;
+    padding-bottom: 4px;
+}
+/* ==========================================
+   3. PÁGINA DO CARDÁPIO
+   ========================================== */
+.cabecalho-cardapio-pag3 {
+    text-align: center;
+    padding-top: 45px;
+    margin-bottom: 25px;
+}
+.cabecalho-cardapio-pag3 h1 {
+    color: white;
+    font-size: 70px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.cabecalho-cardapio-pag3 p {
+    color: white;
+    font-size: 22px;
+    margin-top: 5px;
+}
+/* ==========================================
+   4. CATEGORIAS
+   ========================================== */
+.categorias-pag3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+.categorias-pag3 a {
+    text-decoration: none;
+    background-color: #ffc52f;
+    color: black;
+    padding: 12px 45px;
+    border-radius: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px solid #ffc52f;
+    box-shadow: 0 5px 0 #000;
+    transition: 0.2s;
+}
+.categorias-pag3 a:hover {
+    background-color: #e5a900;
+    border-color: #e5a900;
+    transform: translateY(2px);
+}
+/* ==========================================
+   5. SEÇÕES DE PRODUTOS
+   ========================================== */
+.categoria-produtos-pag3 {
+    max-width: 1200px;
+    margin: 0 auto 70px auto;
+    padding: 0 25px;
+}
+.categoria-produtos-pag3 h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffc52f;
+    padding-bottom: 8px;
+}
+/* ==========================================
+   6. GRADE DOS PRODUTOS
+   ========================================== */
+.produtos-pag3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+/* ==========================================
+   7. CARD DO PRODUTO
+   ========================================== */
+.produto-pag3 {
+    background-color: rgba(0, 0, 0, 0.82);
+    border: 2px solid rgba(255, 197, 47, 0.8);
+    border-radius: 22px;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 540px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+.produto-pag3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+/* ==========================================
+   8. IMAGEM DO PRODUTO
+   ========================================== */
+.produto-pag3 img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+/* ==========================================
+   9. LINHA ENTRE IMAGEM E PRODUTO
+   ========================================== */
+.linha-produto-pag3 {
+    width: 85%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ffc52f,
+        transparent
+    );
+    margin: 13px auto;
+}
+/* ==========================================
+   10. NOME DO PRODUTO
+   ========================================== */
+.produto-pag3 h3 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+/* ==========================================
+   11. LISTA DE INGREDIENTES
+   ========================================== */
+.produto-pag3 ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.produto-pag3 li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 2px;
+}
+.produto-pag3 li::marker {
+    color: #ffc52f;
+}
+/* ==========================================
+   12. PREÇO
+   ========================================== */
+.preco-pag3 {
+    color: #ffc52f;
+    font-size: 25px;
+    margin-top: auto;
+    margin-bottom: 12px;
+}
+/* ==========================================
+   13. BOTÃO ADICIONAR AO CARRINHO
+   ========================================== */
+.btn-carrinho-pag3 {
+    width: 100%;
+    padding: 13px 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffc52f;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+/* Muda de cor ao passar o mouse */
+.btn-carrinho-pag3:hover {
+    background-color: #e5a900;
+    transform: scale(1.03);
+}
+/* ==========================================
+   14. NAVEGAÇÃO DE ROLAGEM
+   ========================================== */
+.navegacao-scroll-pag3 {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 20;
+}
+.seta-cima-pag3,
+.seta-baixo-pag3 {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffc52f;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+.seta-cima-pag3:hover,
+.seta-baixo-pag3:hover {
+    background-color: #e5a900;
+    transform: scale(1.1);
+}
+/* ==========================================
+   15. RODAPÉ
+   ========================================== */
+.rodape-pag3 {
+    width: 100%;
+    min-height: 58.5px;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 13px 20px;
+    margin-top: 30px;
+}
+.rodape-pag3 a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.rodape-pag3 a:hover {
+    color: #ffc52f;
+}
+/* ==========================================
+   16. RESPONSIVIDADE
+   ========================================== */
+@media (max-width: 900px) {
+    .produtos-pag3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pai {
+        padding-right: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .pai {
+        height: auto;
+        padding: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .suspens {
+        margin: 8px 12px;
+        font-size: 18px;
+    }
+    .cabecalho-cardapio-pag3 h1 {
+        font-size: 55px;
+    }
+    .cabecalho-cardapio-pag3 p {
+        font-size: 18px;
+    }
+    .produtos-pag3 {
+        grid-template-columns: 1fr;
+    }
+    .categoria-produtos-pag3 {
+        padding: 0 15px;
+    }
+    .categorias-pag3 a {
+        width: 80%;
+        text-align: center;
+        padding: 10px;
+    }
+    .rodape-pag3 {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+}
+/* ==========================================
+   2. MENU SUPERIOR
+   ========================================== */
+.pai {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding-right: 50px;
+    position: relative;
+    z-index: 10;
+}
+.suspens {
+    color: bisque;
+    font-size: 22px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+.suspens a {
+    color: bisque;
+    text-decoration: none;
+}
+.suspens a:hover {
+    color: #ffc52f;
+}
+.cardapio-link-pag3 a {
+    color: #ffc52f;
+    border-bottom: 2px solid #ffc52f;
+    padding-bottom: 4px;
+}
+/* ==========================================
+   3. PÁGINA DO CARDÁPIO
+   ========================================== */
+.cabecalho-cardapio-pag3 {
+    text-align: center;
+    padding-top: 45px;
+    margin-bottom: 25px;
+}
+.cabecalho-cardapio-pag3 h1 {
+    color: white;
+    font-size: 70px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.cabecalho-cardapio-pag3 p {
+    color: white;
+    font-size: 22px;
+    margin-top: 5px;
+}
+/* ==========================================
+   4. CATEGORIAS
+   ========================================== */
+.categorias-pag3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+.categorias-pag3 a {
+    text-decoration: none;
+    background-color: #ffc52f;
+    color: black;
+    padding: 12px 45px;
+    border-radius: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px solid #ffc52f;
+    box-shadow: 0 5px 0 #000;
+    transition: 0.2s;
+}
+.categorias-pag3 a:hover {
+    background-color: #e5a900;
+    border-color: #e5a900;
+    transform: translateY(2px);
+}
+/* ==========================================
+   5. SEÇÕES DE PRODUTOS
+   ========================================== */
+.categoria-produtos-pag3 {
+    max-width: 1200px;
+    margin: 0 auto 70px auto;
+    padding: 0 25px;
+}
+.categoria-produtos-pag3 h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffc52f;
+    padding-bottom: 8px;
+}
+/* ==========================================
+   6. GRADE DOS PRODUTOS
+   ========================================== */
+.produtos-pag3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+/* ==========================================
+   7. CARD DO PRODUTO
+   ========================================== */
+.produto-pag3 {
+    background-color: rgba(0, 0, 0, 0.82);
+    border: 2px solid rgba(255, 197, 47, 0.8);
+    border-radius: 22px;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 540px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+.produto-pag3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+/* ==========================================
+   8. IMAGEM DO PRODUTO
+   ========================================== */
+.produto-pag3 img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+/* ==========================================
+   9. LINHA ENTRE IMAGEM E PRODUTO
+   ========================================== */
+.linha-produto-pag3 {
+    width: 85%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ff0c04e4,
+        transparent
+    );
+    margin: 13px auto;
+}
+/* ==========================================
+   10. NOME DO PRODUTO
+   ========================================== */
+.produto-pag3 h3 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+/* ==========================================
+   11. LISTA DE INGREDIENTES
+   ========================================== */
+.produto-pag3 ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.produto-pag3 li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 2px;
+}
+.produto-pag3 li::marker {
+    color: #ffc42f39;
+}
+/* ==========================================
+   12. PREÇO
+   ========================================== */
+.preco-pag3 {
+    color: #ffc52f;
+    font-size: 25px;
+    margin-top: auto;
+    margin-bottom: 12px;
+}
+/* ==========================================
+   13. BOTÃO ADICIONAR AO CARRINHO
+   ========================================== */
+.btn-carrinho-pag3 {
+    width: 100%;
+    padding: 13px 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ece8dec5;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+/* Muda de cor ao passar o mouse */
+.btn-carrinho-pag3:hover {
+    background-color: #e5a800c8;
+    transform: scale(1.03);
+}
+/* ==========================================
+   14. NAVEGAÇÃO DE ROLAGEM
+   ========================================== */
+.navegacao-scroll-pag3 {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 20;
+}
+.seta-cima-pag3,
+.seta-baixo-pag3 {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f6cb5dc8;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+.seta-cima-pag3:hover,
+.seta-baixo-pag3:hover {
+    background-color: #ffffffcf;
+    transform: scale(1.1);
+}
+/* ==========================================
+   15. RODAPÉ
+   ========================================== */
+.rodape-pag3 {
+    width: 100%;
+    min-height: 58.5px;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 13px 20px;
+    margin-top: 30px;
+}
+.rodape-pag3 a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.rodape-pag3 a:hover {
+    color: #ffc52f;
+}
+/* ==========================================
+   16. RESPONSIVIDADE
+@media (max-width: 900px) {
+    .produtos-pag3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pai {
+        padding-right: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .pai {
+        height: auto;
+        padding: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .suspens {
+        margin: 8px 12px;
+        font-size: 18px;
+    }
+    .cabecalho-cardapio-pag3 h1 {
+        font-size: 55px;
+    }
+    .cabecalho-cardapio-pag3 p {
+        font-size: 18px;
+    }
+    .produtos-pag3 {
+        grid-template-columns: 1fr;
+    }
+    .categoria-produtos-pag3 {
+        padding: 0 15px;
+    }
+    .categorias-pag3 a {
+        width: 80%;
+        text-align: center;
+        padding: 10px;
+    }
+    .rodape-pag3 {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+}

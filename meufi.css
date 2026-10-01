@@ -1,0 +1,183 @@
+body{
+    margin: 0%;
+    background-image: url(https://img.magnific.com/fotos-premium/uma-mesa-de-madeira-escura-vazia-em-frente-a-um-fundo-bokeh-borrado-abstrato-do-restaurante-pode-ser-usada-para_1319275-794.jpg?semt=ais_hybrid&w=740&q=80);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.grid1{
+    display: grid;
+    grid-template-rows: 60px ;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    gap:20px;
+    height:60px;
+    width:100%
+}
+.menu{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 20px;
+    background-color: black;
+    gap:10px 50px;
+    color:white;
+    border-bottom:2px solid #ffc52f;
+}
+.menu a{
+    color:inherit;
+    text-decoration:none;
+}
+.menu a:hover,
+.menu a:focus-visible{
+    color:#ffc52f;
+    text-decoration:underline;
+}
+.rodape-pag3{
+    box-sizing:border-box;
+    width:100%;
+    min-height:58.5px;
+    background-color:rgba(0,0,0,0.85);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:13px 20px;
+    margin-top:30px;
+}
+.rodape-pag3 a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    transition:0.2s;
+}
+.rodape-pag3 a:hover,
+.rodape-pag3 a:focus-visible{
+    color:#ffc52f;
+}
+        .inicio{
+            color:white
+        }
+        .cardapio{
+        color:white
+        }
+        .promocoes{
+        color:white
+        }
+        .contato{
+        color:white
+        }
+        .carrinho{
+        color:white
+        }
+.grid2{
+    display:grid;
+    grid-template-rows: 200px;
+    width: 100%;
+    height: calc(100vh ,80px);
+}
+        .titulo{
+    position:relative;
+    display:flex;
+    width:100%;
+    height:200px;
+    align-items: center;
+    justify-content: center;
+    }
+    .titulo1{
+    color:white;
+    position:relative;
+    text-align: center;
+    }     
+.caixa{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    width:90%;
+    height:330px;
+    background-color:rgba(0,0,0,0.75);
+    max-width:1200px;
+    margin:0 auto;
+    border-radius:50px;
+}
+.caixa1,
+.caixa2,
+.caixa3{
+    position:relative;
+    box-sizing:border-box;
+    background-color:rgba(24,23,23,0.9);
+    height:200px;
+    width:300px;
+    border:3px solid #ffc52f;
+    padding:18px 32px;
+}
+.caixa1{
+    border-radius:4px;
+}
+.caixa2{
+    border-radius:4px;
+}
+.caixa3{
+    border-radius:4px;
+}
+.card1,
+.card2,
+.card3{
+    color:white;
+}
+.caixa1 h1,
+.caixa2 h1,
+.caixa3 h1{
+    color:#cfcfcf;
+    font-size:25px;
+    margin:0 0 8px 0;
+}
+.caixa1 p,
+.caixa2 p,
+.caixa3 p{
+    color:#cfcfcf;
+    font-size:19px;
+    font-weight:bold;
+    line-height:1.6;
+    margin:0;
+}
+.estrelas{
+    color:#ffc52f;
+    font-size:27px;
+    margin-top:5px;
+    letter-spacing:2px;
+}
+.card3{
+    color:white
+}
+.grid4{
+    grid-template-rows: 300px;
+    margin-left: 20px;
+}
+.caixa1::before,
+.caixa2::before,
+.caixa3::before{
+    content:"“";
+    position:absolute;
+    left:-15px;
+    top:-22px;
+    color:#a9ad8b;
+    font-size:60px;
+    font-weight:bold;
+}
+.caixa1::after,
+.caixa2::after,
+.caixa3::after{
+    content:"”";
+    position:absolute;
+    right:-15px;
+    bottom:-35px;
+    color:#a9ad8b;
+    font-size:60px;
+    font-weight:bold;
+}

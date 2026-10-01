@@ -1,0 +1,143 @@
+.contact-panel-slot,
+.contact-panel-slot *,
+.contact-toggle {
+    box-sizing: border-box;
+}
+.contact-toggle {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+.rodape-pag3 .contact-toggle {
+    color: white;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+.contact-toggle:hover,
+.contact-toggle:focus-visible,
+.rodape-pag3 .contact-toggle:hover,
+.rodape-pag3 .contact-toggle:focus-visible {
+    color: #ffc52f;
+}
+.contact-panel-slot {
+    display: flex;
+    justify-content: flex-end;
+    width: min(100%, 1200px);
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+.contact-panel-slot[hidden] {
+    display: none;
+}
+.contact-card {
+    position: relative;
+    width: min(260px, 100%);
+    max-width: 100%;
+    min-height: 205px;
+    overflow: hidden;
+    border-radius: 32px;
+    background: linear-gradient(135deg, #fff9eb 0%, #ead9bb 100%);
+    box-shadow: 0 14px 28px rgba(43, 31, 16, 0.24);
+    isolation: isolate;
+}
+.contact-card::before,
+.contact-card::after {
+    position: absolute;
+    z-index: -1;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 50%;
+    content: "";
+}
+.contact-card::before {
+    top: -68px;
+    right: -46px;
+    width: 180px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.28);
+}
+.contact-card::after {
+    top: -40px;
+    right: -25px;
+    width: 125px;
+    height: 125px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.contact-card-content {
+    padding: 82px 22px 58px;
+}
+.contact-card-title,
+.contact-card-text {
+    display: block;
+}
+.contact-card-title {
+    color: #59442b;
+    font-size: 18px;
+    font-weight: 800;
+}
+.contact-card-text {
+    margin-top: 8px;
+    color: #6c563a;
+    font-size: 13px;
+    line-height: 1.4;
+}
+.contact-socials {
+    display: flex;
+    gap: 9px;
+    margin-top: 13px;
+}
+.contact-social-icon {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border-radius: 50%;
+    background: #fffdf7;
+    color: #80633e;
+}
+.contact-social-icon svg {
+    width: 17px;
+    height: 17px;
+}
+.contact-card-close {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    padding: 7px 13px;
+    border: 0;
+    border-radius: 16px;
+    background: rgba(255, 253, 247, 0.96);
+    color: #6c563a;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.contact-card-close:hover,
+.contact-card-close:focus-visible {
+    background: #fff;
+    outline: 2px solid #80633e;
+    outline-offset: 2px;
+}
+@media (max-width: 480px) {
+    .contact-panel-slot {
+        padding: 0 14px;
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .contact-card {
+        animation: contact-card-appear 0.2s ease-out;
+    }
+    @keyframes contact-card-appear {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

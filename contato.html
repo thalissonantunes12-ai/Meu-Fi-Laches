@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu-fi-lanches | Contatos</title>
+    <link rel="stylesheet" href="emcasa.css">
+    <link rel="stylesheet" href="contatos.css">
+    <script src="contatos.js" defer></script>
+    <style>
+        main {
+            min-height: 40vh;
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="pai">
+        <nav class="pai" aria-label="Navegação principal">
+            <div class="inicio suspens"><a href="pag1.html">Início</a></div>
+            <div class="cardapio suspens"><a href="pag4.html">Cardápio</a></div>
+            <div class="promoçoes suspens"><a href="pag2.html">Promoções</a></div>
+            <div class="contato suspens"><a href="pag3.html">Avaliações</a></div>
+            <div class="contato suspens"><button class="contact-toggle" type="button" data-contact-toggle aria-controls="contact-panel" aria-expanded="false" aria-current="page">Contatos</button></div>
+        </nav>
+    </header>
+    <main>
+        <h1>Contatos</h1>
+        <p>O conteúdo desta página será adicionado quando o protótipo estiver pronto.</p>
+    </main>
+    <div class="contact-panel-slot" id="contact-panel" data-contact-panel hidden>
+        <section class="contact-card" aria-label="Painel de contatos">
+            <div class="contact-card-content">
+                <span class="contact-card-title">Meu-fi-lanches</span>
+                <span class="contact-card-text">Em breve, nossos canais oficiais de contato estarão aqui.</span>
+                <div class="contact-socials" aria-label="Redes sociais">
+                    <span class="contact-social-icon" role="img" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></span>
+                    <span class="contact-social-icon" role="img" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3h2.7l-7.4 8.5 8.7 9.5h-6.8l-5.3-6.9L4.8 21H2.1l7.9-9.1L1.8 3h7l4.8 6.4L18.9 3Zm-.9 16h1.5L7.2 4.9H5.6L18 19Z"></path></svg></span>
+                    <span class="contact-social-icon" role="img" aria-label="Discord"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7.5A15 15 0 0 1 10 6l.5 1a13 13 0 0 1 3 0l.5-1a15 15 0 0 1 3 1.5c1.5 2.2 2.1 4.5 2 6.8A14 14 0 0 1 15 17l-.8-1.3"></path><path d="M9.8 15.7 9 17a14 14 0 0 1-4-2.7c-.1-2.3.5-4.6 2-6.8"></path><path d="M9 12h.01M15 12h.01"></path></svg></span>
+                    <span class="contact-social-icon" role="img" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L4 20l1.1-4A8.2 8.2 0 1 1 20.2 11.7Z"></path><path d="M8.5 8.1c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.2.2-.2.4-.1.6.4.8 1.2 1.5 2 1.9.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.3.3.5-.1.6-.4 1.2-.9 1.5-.5.4-1.1.5-1.8.3-1.1-.3-2.4-.9-3.6-2.1-1.1-1.1-1.8-2.4-2-3.4-.2-.7 0-1.4.4-1.9Z"></path></svg></span>
+                </div>
+            </div>
+            <button class="contact-card-close" type="button" data-contact-close>Fechar</button>
+        </section>
+    </div>
+    <footer class="rodape-pag3">
+        <a href="pag1.html">Início</a>
+        <a href="pag2.html">Promoções</a>
+        <a href="pag4.html">Cardápio</a>
+        <a href="pag3.html">Avaliações</a>
+        <button class="contact-toggle" type="button" data-contact-toggle aria-controls="contact-panel" aria-expanded="false">Contatos</button>
+    </footer>
+</body>
+</html>
