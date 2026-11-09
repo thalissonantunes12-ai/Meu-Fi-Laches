@@ -23,11 +23,11 @@
     color: #ffc52f;
 }
 .contact-panel-slot {
-    display: flex;
-    justify-content: flex-end;
-    width: min(100%, 1200px);
-    margin: 20px auto 0;
-    padding: 0 20px;
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    z-index: 900;
+    width: min(260px, calc(100% - 40px));
 }
 .contact-panel-slot[hidden] {
     display: none;
@@ -139,5 +139,11 @@
             opacity: 1;
             transform: translateY(0);
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-panel-slot {
+        bottom: 130px;
     }
 }
